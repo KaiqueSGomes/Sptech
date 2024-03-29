@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira quantos depositos foram feitos no banco pelo usuário:
+<br>
+    <input type="text" id="input_depositos">
+<br>
+    Insira o valor do deposito:
+<br>
+    <input type="text" id="input_valor">
+<br>
+    <button onclick="avaliar()">
+        Acompanhar grana
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+
+<script>
+    function avaliar(){
+        var deposito = Number(input_depositos.value);
+        var valor = Number(input_valor.value);
+        var valorFinal = 0
+        var repeticao = 1
+        verificar.innerHTML = ``
+        while(repeticao <= deposito){
+            valorFinal = valor + valorFinal
+            if(repeticao % 3 == 0){
+                valorFinal = valorFinal * 1.01
+            
+            verificar.innerHTML += 
+            `${repeticao}º Mês: R$ ${valorFinal}<img src="https://i.pinimg.com/736x/55/6c/06/556c06049ac36c8dbb095324ce85f242.jpg" heigth="10" width="10"><br>`
+            repeticao ++
+            }else{
+            verificar.innerHTML += 
+            `${repeticao}º Mês: R$ ${valorFinal}<br>`
+            repeticao ++
+            }
+        }
+    }
+</script>

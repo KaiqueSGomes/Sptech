@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome de usuário:
+    <input id="input_usuario">
+<br>
+<form>
+    <label for="texto">Digite o ultimo reino em que Finn e Jake se aventuraram :<br>"doce" ou "fogo" ou "gelado" ou "geleca ou "caroço" ou "vampiros":</label>
+<br>
+    <input type="text" id="input_reino" name="texto" pattern="doce|fogo|gelado|geleca|caroço|vampiros" required>
+</form>
+<br>
+    Digite a idade do usuário:
+    <input type="number" id="input_idadeUsuario" min="0" max="100">
+<br>    
+    Digitie a quantidade de inimigos derrotados:
+    <input type="number" id="input_inimigos" min="0">
+<br>
+    Digitie a quantidade de moedas do usuário:
+    <input type="number" id="input_moedas" min="0">
+<br>
+    <button onclick="Explorar()">
+        Iniciar exploração!
+    </button>
+
+<div id="exibir">
+</div>
+<div id="exibir2">
+</div>
+<div id="exibir3">
+</div>
+<span id="meuSpan">
+</span>
+<p id="meuPar"></p>
+</body>
+</html>
+
+<script>
+    function Explorar(){
+var nome = input_usuario.value
+var reino = input_reino.value
+var idade = Number (input_idadeUsuario.value)
+var inimigos = Number (input_inimigos.value)
+var moedas = Number (input_moedas.value)
+
+    if (reino == "doce"){
+var reinoFogo = "Fogo"
+        if(moedas >80)
+            if(idade >=10)
+    
+    exibir.innerHTML =
+
+`Olá ${nome}, que bom te ver por aqui.<br>
+Ao entrar no reino de fogo o seu dinheiro ganhará um acréscimo de 8% em moedas de ouro que será ${moedas * 0.08} moedas.<br>
+Sendo assim o valor total do seu dinheiro agora será de ${moedas * 1.08} moedas`
+
+alert (`
+Tome cuidado para não se apaixonar pela princesa de fogo!
+`)
+}
+
+else {
+    exibir.innerHTML =
+`Você não pode ir para o reino ${reinoFogo} pois você está B`
+}
+
+
+
+if (reino == "fogo"){
+var reinoGelado = "Gelado"
+        if(moedas >=500)
+            if(idade <14)
+
+    meuSpan.innerHTML = 
+
+    `Olá ${nome}, que bom te ver por aqui<br
+    >Ao entrar no reino de gelo o seu dinheiro sofrerá uma perda de 13% em moedas de ouro que será ${moedas * 0.13} moedas.<br>
+    Sendo assim o valor total do seu dinheiro agora será de ${moedas * 0.87} moedas`
+    alert(`
+    Dê um olá ao Gunter por ele ser um pinguim maneiro
+    `)
+}
+
+else{
+    meuSpan.innerHTML =
+    `Você não pode ir para o reino ${reinoGelado} pois você está B`
+}
+
+
+
+if (reino == "gelado"){
+var reinoGeleca = "Geleca"
+        if(moedas >=3000)
+        if(moedas <=5000)
+                if(idade >=15)
+                if(idade <=17)
+                        if(inimigos <60)
+
+    meuPar.innerHTML = 
+
+`Olá ${nome}, que bom te ver por aqui.<br
+>Ao entrar no reino de geleca o seu dinheiro sofrerá uma perda de 31% em moedas de ouro que será ${moedas * 0.31} moedas.<br>
+Porém haverá um acréscimo de 2000 moedas de ouro, sendo assim o valor total do seu dinheiro agora será de ${(moedas * 0.31) + 2000} moedas`
+alert(`
+Tome cuidado com as amoebas que surgirem pelo caminho
+`)
+}
+
+else{
+    `Você não pode ir para o reino ${reinoGeleca} pois você está B`
+}
+
+
+
+if (reino == "geleca"){
+var reinoCaroço = "Caroço"
+        if(moedas >5000)
+        if(moedas <9000)
+                if(idade >=19)
+                if(idade <=32)
+                        if(inimigos >=100)
+                        if(inimigos <=150)
+
+exibir2.innerHTML = 
+`<i>Olá ${nome}, que bom te ver por aqui.<br>
+Ao entrar no reino de caroço o seu dinheiro ganhará um acréscimo de 28.6% em moedas de ouro que será ${moedas * 0.286} moedas.<br>
+Sendo assim o valor total do seu dinheiro agora será de ${moedas * 1.286} moedas</i>`
+alert(`
+Mande um abraço para a princesa caroço
+`)
+}
+else{
+    `Você não pode ir para o reino ${reinoCaroço} pois você está B`
+}
+
+
+
+if (reino == "caroço"){
+var reinoVampiro = "Vampiro"
+        if(moedas >9000)
+                if(idade >=754)
+                if(idade <=1000)
+                        if(inimigos >=200)
+
+exibir3.innerHTML = 
+`<b>Olá ${nome}, que bom te ver por aqui.<br>
+Ao entrar no reino dos vampiros o seu dinheiro ganhará um acréscimo de 62.98% em moedas de ouro e perderá desse total 87.12% em moedas de ouro que será o equivalente a ${(moedas * 0.6298) * 0.8712} moedas.<br>
+Sendo assim o valor total do seu dinheiro agora será de ${(moedas * 1.6298) * 0.1282} moedas</b>`
+
+    alert(`
+    Parabéns, você concluiu com maestria todos os reinos
+    `)
+
+
+}
+
+else{
+    `Você não pode ir para o reino ${reinoVampiro} pois você está B`
+}
+
+
+
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o valor da renda familiar
+    <input type="text" id="input_renda_familiar">
+<br>
+    Digite o valor da prestaçao:
+    <input type="text" id="input_prestacao">
+<br>
+    <button onclick="chamada()">
+        Verificar financiamento
+    </button>
+<div id="buraco">
+</div>
+</body>
+</html>
+
+<script>
+function chamada(){
+    var Renda = input_renda_familiar.value
+    var prestação = input_prestação
+    var result = Renda / prestação * 100
+    buraco.innerHTML = 
+`
+A prestação corresponde a ${result}% da renda familiar
+`
+}
+</script>

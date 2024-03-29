@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um intervalo crescente de valores numéricos (Menor)
+<br>
+    <input type="number" id="input_numerosMenores">
+<br>
+    Insira um intervalo crescente de valores numéricos (Maior)
+<br>
+    <input type="number" id="input_numerosMaiores">
+    <button onclick="avaliar()">
+        S2 Pares
+    </button>
+    <div id="verificar">
+    </div>
+</body>
+</html>
+
+<script>
+    function avaliar(){
+        var numerosMenores = Number(input_numerosMenores.value);
+        var numerosMaiores = Number(input_numerosMaiores.value);
+        var repeticao = numerosMenores
+        verificar.innerHTML = ``
+        while(repeticao <= numerosMaiores){
+            verificar.innerHTML +=
+            `${repeticao}<br>`
+            repeticao += 2
+        }
+    }
+</script>

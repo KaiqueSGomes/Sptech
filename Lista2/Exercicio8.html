@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome do guerreiro:
+    <input type="text" id="input_nome">
+    <br>
+    Digite o KI normal do guerreiro:
+    <input type="text" id="input_ki">
+    <br>
+    <button onclick="KI()">
+        Ver KI em cada forma
+    </button>
+</body>
+</html>
+
+<script>
+    function KI(){
+        var nome = input_nome.value
+        var inputKI = input_ki.value
+        alert(`
+        Guerreiro ${nome}, Seu KI Super Sayajin é: ${inputKI * 50}
+        `)
+        alert (`Guerreiro ${nome}, seu KI Super Sayajin 2 é: ${inputKI * 100}
+        `)
+    }
+</script>

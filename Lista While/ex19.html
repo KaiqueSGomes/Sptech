@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira quantas xícaras de café você ja tomou na vida:
+<br>
+    <input type="text" id="input_xicaras">
+<br>
+    <button onclick="avaliar()">
+        Ver a quantidade
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+
+<script>
+    function avaliar(){
+        var xicaras = Number(input_xicaras.value);
+        var repeticao = 1
+        var cafe = `<img src="https://lh6.googleusercontent.com/-hXOuZIojIfw/UQGXwLSUYHI/AAAAAAAARWU/ElGoeNYjfQA/s640/blogger-image--1751233207.jpg" height="90", width="90">`
+        var leiteEmPo = `<img src="https://minhasaude.proteste.org.br/wp-content/uploads/2023/06/colher-carregando-punhado-de-leite-em-po-sobre-fundo-branco.jpg" height="90", width="90">`
+        verificar.innerHTML = ``
+        while(repeticao <= xicaras){
+            verificar.innerHTML += 
+            `${leiteEmPo} ${cafe} ${cafe} `
+            repeticao ++
+        }   
+    }
+</script>

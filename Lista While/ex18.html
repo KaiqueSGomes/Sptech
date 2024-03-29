@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira quantas coca-colas você acha que ja bebeu na vida?
+<br>
+    <input type="text" id="input_coca">
+<br>
+    <button onclick="avaliar()">
+        Ver a quantidade
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var coca = Number(input_coca.value);
+        var repeticao = 1
+        verificar.innerHTML = ``
+        while(repeticao <= coca){
+            verificar.innerHTML += 
+            `<img src="https://images.tcdn.com.br/img/img_prod/791033/refrigerante_coca_cola_garrafa_500ml_1525_1_9ac8c4a9b8bfda74db2a0df6dc426ff0.jpg" heidth="120", width="120">`
+            repeticao ++
+        }
+}
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira de quantos em quantos dias o usuário faz musculação:
+    <input id="input_dias">
+<br>
+    <button onclick="avaliar()">
+        Exibir rotina mensal
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+
+        var dias = Number (input_dias.value);
+        var repeticao = 1
+        var diasCS = 0
+            verificar.innerHTML = ``
+            while( repeticao <= 30){
+                diasCS ++
+                
+                if(diasCS == repeticao){ 
+                    verificar.innerHTML += 
+            `Dia ${repeticao} - Musculação<br>`
+            repeticao += dias 
+                }else if(diasCS != repeticao){
+                    verificar.innerHTML += 
+            `Dia ${diasCS} - Jogar CS-GO<br>`
+        }
+     }
+      if(repeticao > 30){
+        while(diasCS < 30){
+            
+            diasCS ++
+        verificar.innerHTML += 
+        `Dia ${diasCS} - Jogar CS-GO<br>` 
+        }   
+    }
+}
+    
+</script>

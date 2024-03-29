@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a quantidade de energia consumida em kWh
+    <input type="number" id="input_consumoEnergia">
+<br>
+    Digite a bandeira tarifada de energia "vermelha", "amarela" ou "verde"
+    <input type="text" id="input_bandeiraEnergia">
+<br>
+    Digite o volume de água consumido em litros
+    <input type="number" id="input_volumeAgua">
+<br>
+    Digite a quantidade de vazamentos de água na casa
+    <input type="number" id="input_vazamentosAgua">
+<br>
+    Digite o volume de gás consumido em litros
+    <input type="number" id="input_volumeGas">
+<br>
+    Digite o valor base do plano de internet
+    <input type="number" id="input_valorInternet">
+<br>
+    Existe uma linha telefônica vinculada ao plano de internet? "sim" ou "não"
+    <input type="text" id="input_linhaTelefonica">
+<br>
+    <button onclick="calcularDespesas()">
+        Calcular despesas fixas
+    </button>
+    <div id="exibir">
+    </div>
+</body>
+</html>
+
+<script>
+    function calcularDespesas(){
+var consumoEnergia = Number(input_consumoEnergia.value)
+var bandeiraEnergia = input_bandeiraEnergia.value
+var volumeAgua = Number(input_volumeAgua.value)
+var vazamentoAgua = Number (input_vazamentosAgua.value)
+var volumeGas = Number (input_volumeGas.value)
+var valorInternetBase = Number(input_valorInternet.value)
+var linhaTelefonica = input_linhaTelefonica.value
+var volumeAguaBase = volumeAgua * 3.5
+var vazamentoAguaPagar = vazamentoAgua * 10.0 + volumeAguaBase
+var volumeGasBase = volumeGas * 2.5
+var valorInternetBaseTelefone = valorInternetBase * 1.25
+
+
+
+
+if (bandeiraEnergia == "verde"){
+consumoEnergia = consumoEnergia * 0.75
+    if (consumoEnergia <=50)
+consumoEnergiaDesconto = consumoEnergia * 0.9
+        if (vazamentoAgua >0)
+vazamentoAguaPagar 
+            if(linhaTelefonica == "sim"){
+valorInternetBaseTelefone = valorInternetBase * 1.25
+}
+else{
+    valorInternetBase
+}
+            }
+
+if (bandeiraEnergia == "amarela"){
+consumoEnergia = consumoEnergia * 0.9
+    if (consumoEnergia <=50)
+consumoEnergiaDesconto = consumoEnergia * 0.9
+        if (vazamentoAgua >0)
+vazamentoAguaPagar 
+            if(linhaTelefonica == "sim"){
+valorInternetBase = valorInternetBase * 1.25
+}
+else{
+    valorInternetBase
+}
+            }
+
+
+
+if (bandeiraEnergia == "vermelha"){
+descontoEnergia = consumoEnergia
+    if (consumoEnergia <=50)
+consumoEnergiaDesconto = consumoEnergia * 0.9
+        if (vazamentoAgua >0)
+vazamentoAguaPagar 
+            if(linhaTelefonica == "sim"){
+valorInternetBase = valorInternetBase * 1.25
+}
+else{
+    valorInternetBase
+}
+            }
+
+
+
+if (bandeiraEnergia == "vermelha"){
+if (consumoEnergia <=50)
+descontoEnergia
+if (vazamentoAgua >0)
+vazamentoAguaPagar
+if(valorInternetBase == "sim")
+valorInternetBaseTelefone
+}
+exibir.innerHTML =
+`Com o consumo de ${consumoEnergia} kWh na bandeira ${bandeiraEnergia}, a conta de energia totaliza R$ ${consumoEnergiaDesconto}.<br>
+
+    Com o consumo de ${volumeAgua} litros de água contendo ${vazamentoAgua} vazamentos e a taxa de saneamento, a conta de água totaliza R$ ${vazamentoAguaPagar}.<br>
+
+    Com o consumo de ${volumeGas} volume de gás, a conta de gás totaliza R$ ${volumeGasBase}.<br>
+
+    Com um valor base de R$ ${valorInternetBase} no plano de internet , a conta de internet/telefone totaliza R$ ${valorInternetBase}.<br>
+
+    Gasto total de despesas mensal: R$ ${consumoEnergiaDesconto + vazamentoAguaPagar + volumeGasBase + valorInternetBase}.`
+
+    }
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o limite inferior da amostragem:
+    <input type="text" id="input_amostragemInferior">
+<br>
+    Insira o limite superior da amostragem:
+    <input type="text" id="input_amostragemSuperior">
+<br>
+    Digite um numero para testar a divisibilidade:
+    <input type="text" id="input_divisibilidade">
+    <button onclick="verAmostragem()">
+        "Contar
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+    function verAmostragem(){
+        var amostragemInferior = Number(input_amostragemInferior.value);
+        var amostragemSuperior = Number(input_amostragemSuperior.value);
+        var divisao = Number(input_divisibilidade.value);
+        var repeticao = amostragemInferior;
+        var numerosExibidos = 0;
+        var numerosSoma = 0;
+        var numerosMedia = 0;
+        var numerosMaiores = 0;
+        var numerosMenores = 0;
+        verificar.innerHTML = ``
+  if(amostragemInferior <=1 ){
+    verificar.innerHTML = 
+    `A amostragem inferior tem que ser maior que 1`
+        if(amostragemSuperior >= 100){
+            verificar.innerHTML = 
+            `A amostragem superior tem que ser menor que 100`
+        }
+            if(){
+                
+            }
+  }  
+     else if(amostragemSuperior > amostragemInferior && divisao <=10 && divisao >=3){
+        while(repeticao <= amostragemSuperior){                                     
+            verificar.innerHTML = ``          
+            if(repeticao % divisao == 0){
+                if(divisao <= amostragemInferior){
+                    numerosMaiores = repeticao
+                }
+                    if(repeticao >= amostragemInferior && repeticao <= amostragemSuperior && repeticao <= divisao + amostragemInferior){
+                        numerosMenores = repeticao
+                    }   
+                verificar.innerHTML +=
+                `${repeticao}, `
+                numerosSoma = numerosSoma + repeticao
+                numerosExibidos ++
+                repeticao ++ 
+           }else{
+            verificar.innerHTML += ``
+            repeticao ++
+           }
+        }  numerosMedia = numerosSoma / numerosExibidos
+                verificar.innerHTML += 
+                `<br>QUANTIDADE TOTAL DE NÚMEROS EXIBIDOS: ${numerosExibidos}<br> 
+                SOMATÓRIO DOS NÚMEROS EXIBIDOS: ${numerosSoma}<br>
+                MÉDIA DOS NÚMEROS EXIBIDOS: ${numerosMedia}<br>
+                MAIOR NÚMERO EXIBIDO: ${numerosMaiores}<br>
+                MENOR NÚMERO EXIBIDO: ${numerosMenores}<br>`
+}
+}              
+</script>

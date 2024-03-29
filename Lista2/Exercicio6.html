@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o valor da pizza?
+    <input type="text" id="inputValorPizza">
+    <br>
+    Digite a quantidade de amigos que vão ajudar a pagar a pizza:
+    <input type="text" id="input_amigos">
+    <br>
+   <button onclick="verP()">
+    #LovePizza
+   </button>
+    </button>
+</body>
+</html>
+
+<script>
+function verP(){
+    var ValorPizza = inputValorPizza.value
+    var Amigos = input_amigos.value
+    alert(`
+    Cada um dos ${Amigos} amigos vai pagar R$${ValorPizza / Amigos}
+    `)
+}
+
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o nome de cada projeto que ja criou na vida:
+<br>
+    <input type="text" id="input_projeto">
+<br>
+    <button onclick="registrar()">Registrar projeto</button>
+<br>
+<br>
+    <button onclick="mostrarProjetos()">Mostrar projetos</button>
+    <div id="registro"></div>
+</body>
+</html>
+
+<script>
+    var listaProjeto = []
+    function registrar(){
+        var projeto = input_projeto.value;
+        listaProjeto.push(projeto)
+        if(listaProjeto.length < 5){
+            registro.innerHTML += 
+        `Você já fez ${listaProjeto.length} projetos. Por isso você é um profissional Júnior<br>`
+        }
+        else if(listaProjeto.length < 13){
+            registro.innerHTML += 
+        `Você já fez ${listaProjeto.length} projetos. Por isso você é um profissional Pleno<br>`
+        }else{
+            registro.innerHTML += 
+        `Você já fez ${listaProjeto.length} projetos. Por isso você é um profissional Sênior<br>`
+        }
+    }
+    function mostrarProjetos(){
+        var tamanhoLista = listaProjeto.length - 1
+        for(posicao = 0; tamanhoLista >= posicao; tamanhoLista -= 1){
+        registro.innerHTML += 
+        `${listaProjeto[tamanhoLista]}<br>`
+        }
+    }
+</script>

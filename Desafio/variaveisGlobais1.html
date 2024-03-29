@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o valor que deseja Retirar
+    <input type="number" id="input_retirada">
+<br>
+    <button onclick="colocar1()">
+        Depositar 0,50
+    </button>
+<br>
+<button onclick="colocar2()">
+    Depositar 2
+</button>
+<br>
+    <button onclick="tirar1()">
+        Retirar 0,5
+    </button>
+<br>
+<button onclick="tirar()">
+    Retirar
+</button>
+<div id="frase">
+Total guardado no cofrinho: R$<u>0</u>
+<br>
+Depósitos efetuados: <u>0</u>
+<br>
+Retiradas efetuadas: <u>0</u>
+</div>
+</body>
+</html>
+<script>
+   var valorTotal = 0
+    depositoTotal = 0
+    retiradasTotal = 0
+    function colocar1(){
+    valorTotal = valorTotal + 0.5;
+    depositoTotal = depositoTotal + 1;
+frase.innerHTML = 
+`Total guardado no cofrinho: R$<u>${valorTotal}</u>
+<br>
+Depósitos efetuados: <u>${depositoTotal}</u>
+<br>
+Retiradas efetuadas: <u>${retiradasTotal}</u>`
+}
+
+    function colocar2(){
+    valorTotal = valorTotal + 2;
+    depositoTotal = depositoTotal + 1;
+frase.innerHTML = 
+`Total guardado no cofrinho: R$<u>${valorTotal}</u>
+<br>
+Depósitos efetuados: <u>${depositoTotal}</u>
+<br>
+Retiradas efetuadas: <u>${retiradasTotal}</u>`
+    }
+
+    function tirar1(){
+    valorTotal = valorTotal - 0.5;
+    retiradasTotal = retiradasTotal + 1;
+frase.innerHTML = 
+`Total guardado no cofrinho: R$<u>${valorTotal}</u>
+<br>
+Depósitos efetuados: <u>${depositoTotal}</u>
+<br>
+Retiradas efetuadas: <u>${retiradasTotal}</u>`
+    }
+
+    function tirar(){
+var Retirada = Number(input_retirada.value);
+    valorTotal = valorTotal - Retirada 
+    retiradasTotal = retiradasTotal + 1 
+frase.innerHTML = 
+`Total guardado no cofrinho: R$<u>${valorTotal}</u>
+<br>
+Depósitos efetuados: <u>${depositoTotal}</u>
+<br>
+Retiradas efetuadas: <u>${retiradasTotal}</u>`
+   }
+</script>

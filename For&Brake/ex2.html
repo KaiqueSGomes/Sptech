@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    "Destino de viagem
+    <br>
+    <input type="text" id="input_destino">
+    <br>
+    <button onclick="adicionar()">Adicionar</button>
+    <br>
+    <br>
+    <button onclick="primeiraViagem()">Primeira viagem</button>
+    <br>
+    <button onclick="terceiraViagem()">Terceira viagem</button>
+    <br>
+    <button onclick="ultimaViagem()">Última viagem</button>
+    <br>
+    <div id="ver"></div>
+</body>
+
+</html>
+<script>
+    listaViagem = []
+    function adicionar() {
+        var destino = input_destino.value;
+        listaViagem.push(` ${destino}`);
+
+    }
+    function primeiraViagem() {
+        var tamanhoViagem = listaViagem.length;
+        
+            ver.innerHTML =
+                `${listaViagem[0]}`
+        if(tamanhoViagem == 0){
+            ver.innerHTML =
+            `Ainda não viajou`
+        }
+    }
+    function terceiraViagem(){
+        var tamanhoViagem = listaViagem.length;
+        
+            ver.innerHTML =
+                `${listaViagem[2]}`
+        if(tamanhoViagem < 3){
+            ver.innerHTML =
+            `Ainda fez a terceira viagem`
+        }
+    }
+    function ultimaViagem(){
+        var tamanhoViagem = listaViagem.length;
+        
+            ver.innerHTML =
+                `${listaViagem[tamanhoViagem - 1]}`
+        if(tamanhoViagem == 0){
+            ver.innerHTML =
+            `Ainda não viajou`
+        }
+    }
+</script>

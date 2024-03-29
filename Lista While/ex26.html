@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um número, que deve estar entre 10 e 500
+<br>
+    <input type="text" id="input_numeros">
+<br>
+    <button onclick="avaliar()">
+        Somar Pares
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var numeros = Number(input_numeros.value);
+
+        var repeticao = 2
+        var somaPares = 0
+        verificar.innerHTML = ``
+        if(numeros < 10 || numeros > 500){
+            alert(`ERRO`)
+        }else{
+            while(repeticao <= numeros){
+                verificar.innerHTML += 
+                `${repeticao}<br>`
+                somaPares += repeticao
+                repeticao += 2
+            }
+            
+            verificar.innerHTML += `Soma dos pares: ${somaPares}`
+        }
+            
+
+    }
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style color="blue"></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select id="select_tabuada" required="required">
+        <option value="">Escolha uma tabuada</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+<br>
+    Digite até qual numero quer multiplicar:
+    <input type="text" id="input_tabuadaFinal">
+<br>
+    <button onclick="avaliar()">
+        Ver tabuada
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var tabuada = select_tabuada.value;
+        var tabuadaFinal = Number(input_tabuadaFinal.value);
+        var repeticao = 1
+verificar.innerHTML = ``
+        while(repeticao <= tabuadaFinal){
+            var resultado = tabuada * repeticao
+            if(repeticao % 2 == 0){
+                verificar.innerHTML += 
+                `<p style="color: blue">${tabuada} x ${repeticao} = ${resultado}</p><br>`
+            repeticao ++ ;
+            }else if(repeticao % 2 == 1){
+                verificar.innerHTML += 
+            `<p style="color: red">${tabuada} x ${repeticao} = ${resultado}</p><br>`
+            repeticao ++ 
+            }
+            
+        }
+    }
+</script>

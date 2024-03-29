@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    Insira a quantidade de pontos de chakra:
+    <input type="text" id="input_chakra">
+<br>
+    Insira a quantidade de clones desejada:
+    <input type="text" id="input_clones">
+<br>
+    Insira a quantidade de clones por linha:
+    <input type="text" id="input_clonesLinha">
+<br>
+    <button onclick="criarClones()">
+        Criar clones
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+    function criarClones(){
+        var chakra = Number(input_chakra.value);
+        var clones = Number(input_clones.value);
+        var clonesLinha = Number(input_clonesLinha.value);
+        var sobraChakra = chakra - (clones * 20)
+        var repeticao = 1
+        verificar.innerHTML = ``
+        if(chakra < 20 || chakra > 5000){
+            alert(`ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000.<br>`)
+        }else if(clones < 0 || clones > 250){
+            alert(`ERRO NA ENTRADA DE DADOS – Quantidade de Clones tem que ser entre 0 e 250.<br>`)
+        }else if(clonesLinha <= 0){
+            alert(`ERRO NA ENTRADA DE DADOS – Quantidade de Clones por linha tem que ser maior que 0`)
+        }else if(chakra < (clones*20) ){
+            alert(`Quantidade de chakra insuficiente para ${clones} clones`)
+        }else{
+            while(repeticao <= clones) {
+            verificar.innerHTML += 
+            `<img src="https://www.alucare.fr/wp-content/uploads/2023/08/Naruto-scaled.jpg" height="100" width="100">`
+            
+            if(repeticao % clonesLinha == 0){
+                verificar.innerHTML += `<br>`
+            }
+            repeticao ++}
+            verificar.innerHTML += `<br>ANÁLISE DA GERAÇÃO DE CLONES<br><br>
+
+Chakra Inicial: ${chakra}<br><br>
+
+Quantidade de Clones: ${clones}<br><br>
+
+Sobra de Chakra: ${sobraChakra}<br><br>`
+            if(sobraChakra > 1000 || clones > 50 && sobraChakra >= (chakra * 0.20)){
+                verificar.innerHTML += 
+                `PROVAVELMENTE VOCÊ VAI GANHAR`
+            }else if(sobraChakra > 500 || clones >= 20 && clones <= 50 && sobraChakra >= (chakra * 0.10)){
+                verificar.innerHTML +=
+                `A LUTA VAI SER MUITO BOA`
+            }else{
+                verificar.innerHTML +=
+                `TORÇA PARA O ADVERSÁRIO SER FRAQUINHO`
+            }
+}
+    }
+</script>

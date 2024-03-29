@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira sua idade:
+    <input type="text" id="input_idade">
+<br>
+    <button onclick="avaliar()">
+    Avaliar
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+
+<script>
+
+        function avaliar(){
+var idade = Number(input_idade.value);
+        repeticao = 0
+        faseDaVida = ``
+        verificar.innerHTML = ``
+    while(repeticao <= idade){
+        if(repeticao <= 4){
+            
+            faseDaVida = `Primeira Infância`
+                verificar.innerHTML +=
+                `${repeticao} anos (${faseDaVida})<br>`
+                repeticao ++
+                    
+            }else if(repeticao >= 5 && repeticao <= 6 ){
+                faseDaVida = ` Pré-escolar`
+                    verificar.innerHTML +=
+                    `${repeticao} anos (${faseDaVida})<br>`
+                    repeticao ++
+
+                }else if(repeticao >= 7 && repeticao <= 10){
+                    faseDaVida = `Segunda-infância`
+                        verificar.innerHTML +=
+                        `${repeticao} anos (${faseDaVida})<br>`
+                        repeticao ++
+
+                    }else if(repeticao >= 11 && repeticao <= 18){
+                        faseDaVida = `Adolescência`
+                            verificar.innerHTML +=
+                            `${repeticao} anos (${faseDaVida})<br>`
+                            repeticao ++
+
+                        }else if(repeticao >= 19 && repeticao <= 50){
+                            faseDaVida = `Adulto`
+                                verificar.innerHTML +=
+                                `${repeticao} anos (${faseDaVida})<br>`
+                                repeticao ++
+
+                            }else if(repeticao >= 51 && repeticao <= 100){
+                                faseDaVida = `Melhor idade`
+                                    verificar.innerHTML +=
+                                    `${repeticao} anos (${faseDaVida})<br>`
+                                    repeticao ++
+
+                                }else{
+                                    faseDaVida = `Mutusalém`
+                                        verificar.innerHTML +=
+                                        `${repeticao} anos (${faseDaVida})<br>`
+                                        repeticao ++
+            
+        }
+    }
+}
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome da sua rua/avenida/vila!
+    <input type="text" id="input_rua">
+<br>
+digite o numero da sua casa!
+<input type="text" id="input_numero">
+<br>
+<button onclick="endereço()">
+Onde eu moro
+</button>
+<div id="end">
+</div>
+</body>
+</html>
+
+<script>
+    function endereço(){
+var rua = input_rua.value
+var numero = input_numero.value
+end.innerHTML = `
+Seu logradouro é ${rua} <br>
+O número do seu logradouro é ${numero}
+`}
+</script>

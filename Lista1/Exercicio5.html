@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a quantidade de KWh consumida no mês na cidade de algoritmolandia:
+    <input type="text" id="input_consumo_mes">
+<br>
+    <button onclick="calcularContaLuz()">
+        calcular conta de luz
+    </button>
+</body>
+</html>
+
+<script>
+    function calcularContaLuz(){
+var ConsumoMensal = Number (input_consumo_mes.value)
+var ResMes = ConsumoMensal * 0.85
+var RDesconto = ResMes * 0.9
+
+if (ResMes >=100){
+    alert(`o valor da conta a ser paga é ${ResMes}`)
+}
+
+
+if (ResMes <100){
+alert(`o valor da conta a ser paga é ${RDesconto}`)
+}
+    }
+</script>

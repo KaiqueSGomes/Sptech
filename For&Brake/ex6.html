@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira nomes de alunos:
+<br>
+    <input type="text" id="input_alunos">
+<br>
+    <button onclick="cadastrar()">
+        Cadastrar alunos
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+
+<script>
+    var listaAlunos = []
+    function cadastrar(){
+        var alunos = input_alunos.value
+        var tamanhoLista = listaAlunos.length
+        listaAlunos.push(alunos)
+        verificar.innerHTML = ``
+        for(var posicao = -1; tamanhoLista > posicao; tamanhoLista -= 1){
+            verificar.innerHTML += 
+        `${listaAlunos[tamanhoLista]}<br>`
+        }
+    }
+</script>

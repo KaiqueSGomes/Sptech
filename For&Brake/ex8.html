@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira os nomes das linhas de ônibus que ele pegou durante a semana:
+<br>
+    <input type="text" id="input_busao">
+<br>
+    <button onclick="Gravar()">Gravar busão</button>
+<br>
+    Pesquise  por uma linha que já tenha pego:
+<br>
+    <input type="text" id="input_linhaPega">
+<br>
+    <button onclick="pesquisar()">Pesquisar</button>
+<br>
+    <div id="verBusao"></div>
+</body>
+</html>
+
+<script>
+    var soma = 0
+    var listaBusao = []
+    function Gravar(){
+        var busao = input_busao.value
+        listaBusao.push(busao)
+
+    }
+    function pesquisar(){
+        var linhaPega = input_linhaPega.value
+        var tamanhoLista = listaBusao.length
+        for(var posicao = -1; tamanhoLista > posicao; tamanhoLista -= 1){
+            verBusao.innerHTML = ``
+            if(linhaPega == listaBusao[tamanhoLista]){
+                verBusao.innerHTML = ""
+                soma == 0
+                verBusao.innerHTML += 
+               ` Você já pegou essa linha ${soma} vezes, nessa ordem: 2, 4, 8, 9`
+                if(linhaPega == listaBusao[tamanhoLista]){
+                    verBusao.innerHTML = 
+                    ``
+                    soma = soma += 1
+                    verBusao.innerHTML += 
+               ` Você já pegou essa linha ${soma} vezes, nessa ordem: 2, 4, 8, 9`
+               break;
+                    } 
+            }else{
+                verBusao.innerHTML += 
+                `Você nunca pegou essa linha `
+            }
+        }
+    }
+</script>

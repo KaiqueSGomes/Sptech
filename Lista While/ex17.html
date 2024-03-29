@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira quantas pessoas vão entrar no carro:
+<br>
+    <input type="text" id="input_pessoas">
+<br>
+    Insira a capacidade de passageiros que o veículo suporta:
+<br>
+    <input type="text" id="input_capacidade">
+    <button onclick="avaliar()">
+        #Partiu Carona
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var pessoas = Number(input_pessoas.value);
+        var capacidade = Number(input_capacidade.value);
+        var repeticao = 1;
+        verificar.innerHTML = ``
+        while(repeticao <= pessoas){
+            if(repeticao <= capacidade){
+                if(repeticao == 1){
+                    verificar.innerHTML += 
+                `Entrou o ${repeticao}º passageiro (que é o(a) motorista)<br>`
+                repeticao ++
+                }else{
+                    verificar.innerHTML +=
+                `Entrou o ${repeticao}º passageiro<br>`
+                repeticao ++
+            }
+            }else if(repeticao > capacidade){
+                verificar.innerHTML += 
+                `O ${repeticao}º passageiro terá que esperar!<br>`
+                repeticao ++
+            }
+        
+        
+        }
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o time que você torce!
+    <input type="text" id="input_time">
+    <br>
+    Digite quantos mundiais seu time tem!
+    <input type="text" id="input_mundiais">
+<br>
+<button onclick="torcedor()">
+Amo meu time
+</button>
+</body>
+</html>
+
+<script>
+function torcedor(){
+var time = input_time.value
+var mundiais = input_mundiais.value
+
+alert (`
+O time ${time} tem ${mundiais} mundiais da FIFA
+`)
+}
+
+</script>

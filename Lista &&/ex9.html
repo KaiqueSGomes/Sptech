@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    insira a altura inicial:
+    <input type="text" id="input_alturaInicial">
+<br>
+    insira a altura final:
+    <input type="text" id="Input_alutraFinal">
+<br> 
+    insira seu nome:
+    <input type="text" id="input_nome">
+<br>
+    insira sua altura:
+    <input type="text" id="input_altura">
+<br>
+    <button onclick="resultado()">
+        Analisar
+    </button>
+    <div id="ver">
+    </div>
+</body>
+</html>
+
+<script>
+    function reusltado(){
+var alturaInicial = Number (input_alturaInicial.value)
+var alturaFinal = Number (inpunt_alturaFinal.value)
+var nome = input_numer.value
+var altura = Number (input_altura.value)
+
+if(alturaFinal < alturaInicial){
+alert(`NÃO SEGUIR EM FRENTE.`)
+    }
+else if (altura >= alturaInicial && altura <= alturaFinal){
+    ver.innerHTMML = 
+`O candidato ${nome} com altura de ${altura} participará do processo de seleção de piloto`
+}
+else {
+ver.innerHTMML = 
+`Infelizmente o candidato ${nome} com altura de ${altura} não atende os requisitos`
+}
+    }
+</script>

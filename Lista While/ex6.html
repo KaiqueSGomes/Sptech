@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o nome da pessoa que você mais ama na vida?
+    <input type="text" id="input_pessoa">
+<br>
+    O quanto você ama?(numero inteiro)
+    <input type="number" id="input_qtoAma">
+<br>
+    <button onclick="avaliar()">
+        Expressar amor
+    </button>
+    <div id="verificar">
+    </div>
+</body>
+</html>
+
+<script>
+    function avaliar(){
+        var pessoa = input_pessoa.value;
+        var qtoAma = input_qtoAma.value;
+
+        repeticao = 1;
+verificar.innerHTML = ``
+        while (repeticao <= qtoAma){
+            verificar.innerHTML +=
+            `${repeticao} - ${pessoa}, eu te amo! Sempre lembre disso!<br>`
+            repeticao += 1;
+        }
+    }
+</script>

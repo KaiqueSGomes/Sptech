@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Digite sua nota na avaliação continuada:
+   <input type="number" id="input_continuada">
+   <br>
+   Digite sua nota na avaliação semestral
+   <input type="number" id="input_semestral"> 
+<br>
+Digite seu nome:
+<input type="text" id="input_nome">
+<button onclick="Avc()">
+Calcular média
+</button>
+<div id="ava">
+</div>
+</body>
+</html>
+
+<script>
+    function Avc(){
+var nome = input_nome.value
+var continuada = Number (input_continuada.value)
+var semestral = Number (input_semestral.value)
+var MEDIA  = Number (continuada * 0.4 + semestral * 0.6)
+ava.innerHTML =
+`
+A média de ${nome} será ${MEDIA}
+`
+}
+</script>

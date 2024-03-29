@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantas voltas o carro dara na corrida?
+    <input type="text" id="input_voltas">
+<br>
+    <button onclick="avaliar()">
+        Iniciar corrida!
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var voltas = input_voltas.value;
+        var repeticao = 1
+        verificar.innerHTML = ``
+        while(repeticao <= voltas){
+            verificar.innerHTML +=
+            `Carro dando ${repeticao}ª volta<br>`
+            if(repeticao == voltas){
+                verificar.innerHTML += 
+                `Corrida finalizada! `
+            }
+            repeticao +=1
+        }
+    }
+</script>

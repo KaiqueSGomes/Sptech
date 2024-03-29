@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o valor da passagem?
+    <input type="number"  id="input_valor">
+    <br>
+    Quantas viagens você fará por mês?
+    <input type="number" id="input_viagens">
+    <br>
+    <button onclick="Passagem()">
+        Ver econômia
+    </button>
+</body>
+</html>
+
+<script>
+    function Passagem(){
+        var VPassagem = input_valor.value
+        var Viagens = input_viagens.value
+        alert (`
+        Você economizará R$${VPassagem * Viagens} por mês
+        `) 
+    }
+</script>

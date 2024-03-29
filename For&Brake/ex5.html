@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira os filmes que mais gosta partindo do melhor:
+<br>
+    <input type="text" id="input_filmes">
+<br>
+    <button onclick="cadastrar()">
+        Cadastrar filme
+    </button>
+    <div id="div_listaFilmes"></div>
+</body>
+</html>
+
+<script>
+    var listaFilmes = []
+    function cadastrar(){
+        var filmes = input_filmes.value;
+        listaFilmes.push(filmes)
+        div_listaFilmes.innerHTML = ``
+        for(var posicao = 0; posicao <= listaFilmes.length - 1; posicao ++){
+            if(posicao % 2 == 0){
+                div_listaFilmes.innerHTML += 
+        `${posicao + 1} - ${listaFilmes[posicao]}`
+            }else{
+                div_listaFilmes.innerHTML += 
+            `${posicao + 1} - ${listaFilmes[posicao]}<br>`
+            }
+            
+            
+        }         
+}
+</script>

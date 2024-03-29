@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um número:
+<br>
+    <input type="text" id="input_numeros">
+<br>
+    Insira um numero para dividir dentro no numero informado a cima
+<br>
+    <input type="text" id="input_dividir">
+<br>
+    <button onclick="avaliar()">
+        Somar números
+    </button>
+    <div id="veri"></div>
+</body>
+</html>
+
+<script>
+    function avaliar(){
+        var numeros = Number(input_numeros.value);
+        var dividir = Number(input_dividir.value);
+        var repeticao = 0
+        var somaDivisor = 0
+        veri.innerHTML = ``
+        while(repeticao <= numeros){
+            repeticao ++
+            if(repeticao % dividir == 0){
+                veri.innerHTML +=  
+            `${repeticao}<br>`
+            somaDivisor += repeticao
+            }
+            
+        }
+        veri.innerHTML +=
+        `Soma dos Múltiplos: ${somaDivisor}`
+
+    }
+</script>

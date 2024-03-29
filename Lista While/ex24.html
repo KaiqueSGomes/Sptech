@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um valor de 0 a 100
+<br>
+<input type="text" id="input_numeros">
+<br>
+    <button onclick="avaliar()">
+        Ver divisores
+    </button>
+    <div id="verificar"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var numeros = Number(input_numeros.value);
+        
+        repeticao = 1
+verificar.innerHTML =""
+        while(repeticao <= numeros){
+            var exibidos = repeticao
+            if(numeros % exibidos == 0){
+                if(exibidos % 2 == 0 || exibidos % 3 == 0 || exibidos % 5 == 0 || exibidos % 7 == 0 || exibidos == 1){
+                    if(exibidos == 2 || exibidos == 3 || exibidos == 5 || exibidos == 7){
+                        verificar.innerHTML += `${exibidos} - primo<br>`
+                    }else
+                    verificar.innerHTML += `${exibidos}<br>`
+                    
+                }else {
+                    verificar.innerHTML += `${exibidos} - primo<br>`
+                }
+                
+            }repeticao ++
+        }
+    }
+</script>
